@@ -1,0 +1,35 @@
+Mongo DB Cheat Sheet
+#list available DBs
+show dbs
+#show collections (tables)
+show collections
+#show which db you are currently working in
+db
+# stepping into a database to be able to query, update, insert data to it
+use travel_db
+#create collection (table)
+db.createCollection("destinations")
+#insert document (record)
+db.destinations.insert({"continent": "Africa", "country": "Morocco", "major_cities": ["Casablanca", "Fez", "marrakech"]})
+# list all documents (records) in current db
+db.destinations.find()
+# list all documents (records) in current db in readable format
+db.destinations.find().pretty()
+# query db for specific key:value pair
+db.destinations.find({"continent": "Africa"})
+#update many values associated with Key
+db.destinations.updateMany({"continent": "Africa"}, {$set: {"continent": "Antarctica"}})
+#another way to update many values associated with a key (multi: true)
+db.destinations.update({"country": "Egypt"}, {$set: {"continent": "Antarctica"}}, {multi: true})
+# add element to existing array
+db.destinations.update({"country": "Morocco"}, {$push: {"major_cities": "Agadir"}})
+#update value associated with a key
+db.destinations.update({"country": "Canada" 
+db.destinations.drop()
+#drop db
+db.dropDatabase()
+Collapse
+
+
+
+
