@@ -16,19 +16,31 @@ data.forEach((ufoSighting) => {
 // Getting a reference to the button on the page with the id property set to `click-me`
 var button = d3.select("#filter-btn");
 
-
 button.on("click", function() {
 
     // Select the input element and get the raw HTML node
-    var inputElement = d3.select("#datetime");
+    var inputElementDate = d3.select("#datetime");
 
     // Get the value property of the input element
-    var inputValue = inputElement.property("value");
+    var inputValueDate = inputElementDate.property("value");
 
-    console.log('Filter button was clicked')
-    console.log(inputValue);
+    console.log("Date: ", inputValueDate);
+ 
+    var inputElementState = d3.select("#state");
 
-    var filteredData = tableData.filter(tableData => tableData.datetime === inputValue);
+    var inputValueState = inputElementState.property("value");
+
+    console.log("Element: ", inputElementState);
+    console.log("State: ", inputValueState);
+
+    var filteredData = tableData;
+    if(inputValueState !== '*')
+        filteredData = filteredData.filter(d => d.state === inputValueState);
+    if(inputValueDate !== '')
+        filteredData = filteredData.filter(d => d.datetime === inputValueDate);
+   /* var filteredData = tableData.filter(tableData => 
+        (tableData.datetime === inputValueDate || inputValueDate === '') && (tableData.state === inputValueState || inputValueState === '*'));
+        */
 
     console.log(filteredData);
 

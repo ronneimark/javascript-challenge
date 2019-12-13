@@ -25,7 +25,6 @@ button.on("click", function() {
     // Get the value property of the input element
     var inputValue = inputElement.property("value");
 
-    console.log('Filter button was clicked')
     console.log(inputValue);
 
     var filteredData = tableData.filter(tableData => tableData.datetime === inputValue);

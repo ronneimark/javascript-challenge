@@ -15,15 +15,14 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="index.html">UFO Sightings
+          <a class="navbar-brand" href="index-level-2.html">UFO Sightings
             <img class="nav-ufo" src="static/images/ufo.svg">
           </a>
         </div>
       </div>
     </nav>
     <div class="hero text-center">
-      <h1>UFO Sightings</h1>
-      <p>The Truth is Out There</p>
+      <h1><font color='red'>The Truth is Out There</font></h1>
     </div>
     <div class="container">
       <div class="row margin-top-50">
@@ -37,7 +36,64 @@
                     <ul class="list-group" id="filters">
                       <li class="filter list-group-item">
                         <label for="date">Enter a Date</label>
-                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                        <input class="form-control" id="datetime" type="text" placeholder="1/10/2010">
+                      </li>
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <label for="state">State</label>
+                        <!-- <input class="form-control" id="state" type="dropdown"> -->
+                          <select id="state">
+                            <option value="*">All States</option>
+                            <option value='al'>Alabama</option>
+                            <option value='ak'>Alaska</option>
+                            <option value='az'>Arizona</option>
+                            <option value='ar'>Arkansas</option>
+                            <option value='ca'>California</option>
+                            <option value='co'>Colorado</option>
+                            <option value='ct'>Connecticut</option>
+                            <option value='de'>Delaware</option>
+                            <option value='dc'>District of Columbia</option>
+                            <option value='fl'>Florida</option>
+                            <option value='ga'>Georgia</option>
+                            <option value='h i'>Hawaii</option>
+                            <option value='id'>Idaho</option>
+                            <option value='il'>Illinois</option>
+                            <option value='in'>Indiana</option>
+                            <option value='ia'>Iowa</option>
+                            <option value='ks'>Kansas</option>
+                            <option value='la'>Louisiana</option>
+                            <option value='me'>Maine</option>
+                            <option value='md'>Maryland</option>
+                            <option value='ma'>Massachussets</option>
+                            <option value='mi'>Michigan</option>
+                            <option value='mn'>Minnesora</option>
+                            <option value='ms'>Mississippi</option>
+                            <option value='mo'>Missouri</option>
+                            <option value='mt'>Montana</option>
+                            <option value='ne'>Nebraska</option>
+                            <option value='nv'>Nevada</option>
+                            <option value='nh'>New Hampshire</option>
+                            <option value='nj'>New Jersey</option>
+                            <option value='nm'>New Mexico</option>
+                            <option value='ny'>New York</option>
+                            <option value='nc'>North Carolina</option>
+                            <option value='nd'>North Dakota</option>
+                            <option value='oh'>Ohio</option>
+                            <option value='ok'>Oklahoma</option>
+                            <option value='or'>Oregon</option>
+                            <option value='pa'>Pennsylvania</option>
+                            <option value='ri'>Rhode Island</option>
+                            <option value='sc'>South Carolina</option>
+                            <option value='sd'>South Dakota</option>
+                            <option value='tn'>Tennessee</option>
+                            <option value='tx'>Texas</option>
+                            <option value='ut'>Utah</option>
+                            <option value='vt'>Vermont</option>
+                            <option value='va'>Virginia</option>
+                            <option value='wv'>West Virginia</option>
+                            <option value='wi'>Wisconsin</option>
+                            <option value='wy'>Wyoming</option>
+                          </select>
                       </li>
                     </ul>
                   </div>
@@ -73,7 +129,7 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
   <script src="static/js/data.js"></script>
-  <script src="static/js/app.js"></script>
+  <script src="static/js/app2.js"></script>
 </body>
 
 </html>
